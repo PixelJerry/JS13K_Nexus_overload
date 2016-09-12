@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Nexus overload</title>
+
+	<link rel="stylesheet" type="text/css" href="./src/css/gen.css">
+	<style></style>
+</head>
+<body>
+<div id="container">
+	<div id="stage" class="hidden">
+		<div id="playArea">
+			<div id="tutorial" class="noselect"></div>
+			<div id="story" class="txtGreen noselect"></div>
+			<canvas id="mainCanvas" class="room btnGrey"></canvas>
+			<div class="hpBar">
+				<div id="hpInd"></div>
+				<div id="hpTxt"></div>
+			</div>
+			<div class="xpBar">
+				<div id="xpInd"></div>
+				<div id="xpTxt"></div>
+			</div>
+		</div>
+
+		<div id="menu" class="noselect">
+			<div id="menuHead"></div>
+			<!-- Main Menu -->
+			<div id="mainMenu" class="hidden">
+				<div class="menuButtons">
+					<div id="record" class="menuButton hidden"></div>
+					<div class="menuButton btnGreen" onclick="if (Menu.open()) { if (Network.highestLevel > 1) {Network.tutorial = false} Game.start();}">Play<div class="menuButtonSubText txtGreen">The little packet that could.</div></div>
+					<div id="tutButton" class="menuButton btnBlue hidden" onclick="if (Menu.open()) {Network.tutorial = true; Game.start();}">Tutorial<div class="menuButtonSubText txtBlue">Replay through the tutorial level.</div></div>
+				</div>
+				<div class="footer">A game by Jeremy de Reuck</div>
+			</div>
+			<!--  -->
+			<div id="endScreen" class="hidden">
+			</div>
+			<!--  -->
+			<div id="upgradeMenu" class="hidden"></div>
+			<div id="mapMenu" class="hidden">
+				<div id="mapLayer" class="txtWhite"></div>
+				<canvas id="mapLines"></canvas>
+				<div id="map" class="btnGrey"></div>
+				<div id="mapLegend">
+					<div class="legendBlock btnGreen fillGreen"></div>
+					<div class="legendText txtGreen">You</div>
+					<div class="legendBlock btnBlue"></div>
+					<div class="legendText txtBlue">Proxy</div>
+					<div class="legendBlock btnOrange txtOrange">+</div>
+					<div class="legendText txtOrange">Firewall</div>
+					<div class="legendBlock btnRed txtRed">+</div>
+					<div class="legendText txtRed">Router</div>
+					<div class="legendText txtWhite">+ Gain an additional upgrade when completing this node</div>
+				</div>
+			</div>
+			<!--  -->
+			<div id="pauseMenu" class="hidden">
+				<div id="endHead" class="txtWhite"></div>
+				<div id="endStats" class="txtGreen"></div>
+				<div class="menuButtons">
+					<div id="resumeBtn" class="menuButton btnGreen" onclick="if (Menu.open()) {Menu.toggle();}">Resume<div class="menuButtonSubText txtGreen">Get back in the fight</div></div>
+					<div class="menuButton btnBlue" onclick="if (Menu.open()) {Game.start();}">Restart<div class="menuButtonSubText txtBlue">Let's try this again!</div></div>
+					<div class="menuButton btnOrange" onclick="if (Menu.open()) {Menu.toggle('main');}">Main menu<div class="menuButtonSubText txtOrange">That’s enough for now thanks</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="./src/js/Utilities.js"></script>
+<script type="text/javascript" src="./src/js/jsfxr.js"></script>
+<script type="text/javascript" src="./src/js/Game.js"></script>
+<script type="text/javascript" src="./src/js/Menu.js"></script>
+<script type="text/javascript" src="./src/js/Input.js"></script>
+<script type="text/javascript" src="./src/js/Bullets.js"></script>
+<script type="text/javascript" src="./src/js/Player.js"></script>
+<script type="text/javascript" src="./src/js/Room.js"></script>
+<script type="text/javascript" src="./src/js/Network.js"></script>
+<script type="text/javascript" src="./src/js/Enemy.js"></script>
+<script type="text/javascript" src="./src/js/Sound.js"></script>
+<script type="text/javascript" src="./src/js/FX.js"></script>
+
+<script>
+Game.init();
+</script>
+</body>
+</html>
