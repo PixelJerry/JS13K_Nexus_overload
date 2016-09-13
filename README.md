@@ -16,7 +16,7 @@ ESC will pause the game, and will return to the main menu when not in the game w
 
 # Credits #
 * Jeremy de Reuck - Programming, Art and Game design
-* Sound – JSFXR with lots of help form [Jack Rugile's blog post](http://codepen.io/jackrugile/post/arcade-audio-for-js13k-games) and modified with the help of [kevincennis code](https://github.com/spmurrayzzz/ElementalVanguard/commit/d32f8d2d08c493611532d71f8a2934fc5afa1bfb).
+* Sound – JSFXR with lots of help from [Jack Rugile's blog post](http://codepen.io/jackrugile/post/arcade-audio-for-js13k-games) and modified with the help of [kevincennis' code](https://github.com/spmurrayzzz/ElementalVanguard/commit/d32f8d2d08c493611532d71f8a2934fc5afa1bfb).
 
 #Screenshots#
 ![Nexus overload Game Play 1](https://github.com/PixelJerry/JS13K_Nexus_overload/blob/master/screenshots/Gameplay1.png "Nexus overload Game Play 1")
